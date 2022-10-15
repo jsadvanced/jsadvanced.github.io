@@ -1,0 +1,21 @@
+.logo {
+  display: flex;
+  margin: 0 auto;
+  line-height: 1;
+
+  span {
+    padding: 10px;
+    font-weight: 800;
+    border: 2px solid #000;
+  }
+
+  .js {
+    background: #fde721;
+    color: #000;
+  }
+
+  .advanced {
+    background: #000;
+    color: #fde721;
+  }
+}

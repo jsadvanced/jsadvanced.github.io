@@ -1,26 +1,23 @@
-import logo from './js.png';
-import './App.css';
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Main from "./components/Layout/Main";
+import Sidebar from "./components/Sidebar";
+import Home from "./pages/Home";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />
+    //errorElement: <ErrorPage />,
+  }
+]);
 
 function App() {
-    return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo"/>
-                <p>
-                    <code>This is web source of Advanced JavaScript Project!</code>
-                </p>
-                <p>Website is under construction.</p>
-                <a
-                    className="App-link"
-                    href="https://www.facebook.com/jsadvanced"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Continue in Facebok page
-                </a>
-            </header>
-        </div>
-    );
+  return (
+    <Main>
+      <Sidebar />
+      <RouterProvider router={router} />
+    </Main>
+  );
 }
 
 export default App;
