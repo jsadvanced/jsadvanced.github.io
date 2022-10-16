@@ -5,7 +5,6 @@ export const notionApi = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: "https://api.notion.com/v1",
     prepareHeaders: headers => {
-      headers.set("Access-Control-Allow-Origin", "*");
       headers.set("Authorization", process.env.REACT_APP_NOTION_SECRET);
       headers.set("Notion-Version", " 2022-02-22");
       return headers;
